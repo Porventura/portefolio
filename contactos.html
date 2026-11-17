@@ -39,6 +39,15 @@
         <!-- novalidate desliga os avisos do browser para usarmos os do Bootstrap.
              As regras continuam a ser as do HTML: required, type="email", minlength. -->
         <form id="form-contacto" class="needs-validation" novalidate>
+          <!-- Campos escondidos que o serviço Web3Forms lê (o visitante não os vê) -->
+          <!-- access_key: troca pela chave que recebeste no email. Pode ser pública: só serve para ENVIAR para ti, não para ler o teu email -->
+          <input type="hidden" name="access_key" value="43a2aade-2009-46bd-a618-1a3bcf591461">
+          <!-- subject: o assunto do email que vais receber -->
+          <input type="hidden" name="subject" value="Nova mensagem do portefólio">
+          <!-- botcheck: "armadilha" para robôs (honeypot). Uma pessoa não vê esta caixa;
+               um robô que preencha tudo marca-a, e o Web3Forms deita a mensagem fora -->
+          <input type="checkbox" name="botcheck" class="d-none" tabindex="-1" autocomplete="off">
+
           <div class="mb-3">
             <!-- for="nome" tem de ser igual ao id="nome": clicar na label põe o cursor no campo -->
             <label for="nome" class="form-label">Nome</label>
@@ -67,7 +76,7 @@
             <textarea class="form-control" id="mensagem" name="mensagem" rows="5" minlength="10" required></textarea>
             <div class="invalid-feedback">A mensagem tem de ter pelo menos 10 caracteres.</div>
           </div>
-          <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+          <button type="submit" class="btn btn-primary" id="botaoEnviar">Enviar mensagem</button>
         </form>
       </div>
 
@@ -101,12 +110,11 @@
   <div class="toast-container position-fixed bottom-0 end-0 p-3">
     <div id="aviso" class="toast" role="status" aria-live="polite" aria-atomic="true">
       <div class="toast-header">
-        <strong class="me-auto">Obrigado!</strong>
+        <!-- O texto do título e da mensagem é trocado pelo formulario.js (sucesso ou erro) -->
+        <strong class="me-auto" id="avisoTitulo">Aviso</strong>
         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fechar"></button>
       </div>
-      <div class="toast-body">
-        Formulário de demonstração: a mensagem ainda não é enviada. O envio por email será ativado numa próxima versão.
-      </div>
+      <div class="toast-body" id="avisoTexto"></div>
     </div>
   </div>
 
