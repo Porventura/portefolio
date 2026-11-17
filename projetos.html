@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projetos | Rui Fernandes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Rui Fernandes</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="projetos.html">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <h1 class="mb-2">Projetos</h1>
+    <p class="lead mb-4">Trabalho prático em hardware, redes e web.</p>
+
+    <!-- ========== CARDS + BADGES ========== -->
+    <!-- 1 cartão por linha no telemóvel, 2 no tablet (md) -->
+    <div class="row row-cols-1 row-cols-md-2 g-4 mb-5">
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <!-- alt: descreve a imagem para quem não a vê (leitores de ecrã) -->
+          <img src="img/lab-rede.svg" class="card-img-top" alt="Diagrama do laboratório de rede virtual">
+          <div class="card-body">
+            <h2 class="card-title h5">Laboratório de rede virtual</h2>
+            <p class="card-text">Rede empresarial simulada num só PC, com firewall, servidor de domínio e cliente.</p>
+            <!-- Badges: etiquetas com as tecnologias -->
+            <span class="badge text-bg-primary">VirtualBox</span>
+            <span class="badge text-bg-danger">pfSense</span>
+            <span class="badge text-bg-dark">Windows Server</span>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <!-- data-bs-target="#modalLab" abre o modal com id="modalLab" (mais abaixo) -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLab">Ver detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/pc-montagem.svg" class="card-img-top" alt="Esquema dos componentes de um PC">
+          <div class="card-body">
+            <h2 class="card-title h5">Montagem e reparação de PCs</h2>
+            <p class="card-text">Montagem de raiz, diagnóstico de avarias e upgrades de memória e discos.</p>
+            <span class="badge text-bg-secondary">Hardware</span>
+            <span class="badge text-bg-secondary">Diagnóstico</span>
+            <span class="badge text-bg-info">Windows</span>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPC">Ver detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/dimmantes.svg" class="card-img-top" alt="Logótipo do site DIMMantes">
+          <div class="card-body">
+            <h2 class="card-title h5">DIMMantes</h2>
+            <p class="card-text">Loja fictícia de joias feitas com módulos de RAM, criada para praticar programação web.</p>
+            <span class="badge text-bg-warning">HTML</span>
+            <span class="badge text-bg-info">CSS</span>
+            <span class="badge text-bg-success">JavaScript</span>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDimmantes">Ver detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
+          <img src="img/portefolio.svg" class="card-img-top" alt="Esquema da página inicial deste portefólio">
+          <div class="card-body">
+            <h2 class="card-title h5">Este portefólio</h2>
+            <p class="card-text">Site de 4 páginas feito com HTML e Bootstrap 5, publicado no GitHub Pages.</p>
+            <span class="badge text-bg-warning">HTML</span>
+            <span class="badge text-bg-primary">Bootstrap</span>
+            <span class="badge text-bg-dark">GitHub</span>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPortefolio">Ver detalhes</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ========== GALERIA ========== -->
+    <h2 class="h4 mb-3">Galeria</h2>
+    <p class="text-body-secondary">Clique numa imagem para a ver em ponto grande.</p>
+    <!-- col-6 col-md-3: 2 miniaturas por linha no telemóvel, 4 a partir do tablet -->
+    <div class="row g-3 galeria">
+      <div class="col-6 col-md-3">
+        <!-- data-imagem guarda o caminho da imagem grande; o galeria.js lê-o -->
+        <img src="img/lab-rede.svg" class="img-fluid rounded border" alt="Laboratório de rede virtual"
+             data-bs-toggle="modal" data-bs-target="#modalImagem" data-imagem="img/lab-rede.svg">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="img/pc-montagem.svg" class="img-fluid rounded border" alt="Montagem e reparação de PCs"
+             data-bs-toggle="modal" data-bs-target="#modalImagem" data-imagem="img/pc-montagem.svg">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="img/dimmantes.svg" class="img-fluid rounded border" alt="DIMMantes"
+             data-bs-toggle="modal" data-bs-target="#modalImagem" data-imagem="img/dimmantes.svg">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="img/portefolio.svg" class="img-fluid rounded border" alt="Este portefólio"
+             data-bs-toggle="modal" data-bs-target="#modalImagem" data-imagem="img/portefolio.svg">
+      </div>
+    </div>
+  </main>
+
+  <!-- ========== MODAIS DOS PROJETOS ========== -->
+  <!-- Ficam escondidos (class="modal fade") até um botão com data-bs-target="#id" os abrir.
+       tabindex="-1" permite fechar com a tecla Esc. -->
+
+  <div class="modal fade" id="modalLab" tabindex="-1" aria-labelledby="tituloLab" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloLab">Laboratório de rede virtual</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Três máquinas virtuais em VirtualBox a simular a rede de uma pequena empresa:</p>
+          <ul>
+            <li><strong>pfSense:</strong> firewall e router entre a internet e a rede interna.</li>
+            <li><strong>Windows Server:</strong> Active Directory, DNS, DHCP e servidor web IIS.</li>
+            <li><strong>Cliente Windows:</strong> ligado ao domínio, recebe IP por DHCP.</li>
+          </ul>
+          <p class="mb-0">Aprendi a configurar placas de rede virtuais (NAT, bridged, rede interna) e a testar a ligação entre máquinas.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPC" tabindex="-1" aria-labelledby="tituloPC" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloPC">Montagem e reparação de PCs</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <ul class="mb-0">
+            <li>Montagem de computadores de raiz.</li>
+            <li>Formatação e instalação de sistemas operativos.</li>
+            <li>Upgrades de memória RAM e substituição de discos (HDD para SSD).</li>
+            <li>Diagnóstico de avarias e teste final antes da entrega.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalDimmantes" tabindex="-1" aria-labelledby="tituloDimmantes" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloDimmantes">DIMMantes</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Loja online fictícia, com catálogo, avaliador de memória e carrinho simulado.
+            Feita para praticar HTML, CSS e JavaScript, com humor sobre a subida do preço da RAM.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://porventura.github.io/dimmantes/" class="btn btn-primary" target="_blank" rel="noopener">Ver online</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPortefolio" tabindex="-1" aria-labelledby="tituloPortefolio" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloPortefolio">Este portefólio</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Projeto final da UFCD de criação de sites web: 4 páginas com HTML e Bootstrap 5
+            (navbar, grelha, carrossel, separadores, accordion, cartões, modais, formulário com validação e toast).</p>
+          <p class="mb-0">Desenvolvido com apoio de IA (Claude) como tutor: explicação dos componentes e revisão do código.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== MODAL DA GALERIA ========== -->
+  <!-- Um só modal para todas as imagens: o galeria.js troca a imagem antes de o abrir -->
+  <div class="modal fade" id="modalImagem" tabindex="-1" aria-labelledby="tituloImagem" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloImagem">Imagem</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <img id="imagemGrande" src="" class="img-fluid w-100" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white-50 text-center py-4">
+    <small>&copy; 2026 Rui Fernandes · Feito à mão com HTML e Bootstrap</small>
+  </footer>
+
+  <!-- 1.º o Bootstrap, depois o nosso galeria.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/galeria.js"></script>
+</body>
+</html>

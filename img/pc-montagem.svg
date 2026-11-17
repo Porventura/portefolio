@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="600" height="340" fill="#f8f9fa"/>
+  <text x="300" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#212529">Montagem e reparação de PCs</text>
+  <!-- Placa-mãe -->
+  <rect x="70" y="55" width="300" height="255" rx="10" fill="#2f4f3a" stroke="#1d3326" stroke-width="3"/>
+  <text x="220" y="298" text-anchor="middle" font-size="12" fill="#cfe8d6">placa-mãe</text>
+  <!-- CPU -->
+  <rect x="105" y="85" width="80" height="80" rx="6" fill="#adb5bd" stroke="#495057" stroke-width="2"/>
+  <text x="145" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#212529">CPU</text>
+  <!-- RAM -->
+  <rect x="215" y="78" width="16" height="110" fill="#0d6efd"/>
+  <rect x="240" y="78" width="16" height="110" fill="#0d6efd"/>
+  <text x="236" y="205" text-anchor="middle" font-size="13" fill="#fff">RAM</text>
+  <!-- GPU -->
+  <rect x="95" y="225" width="250" height="36" rx="4" fill="#212529"/>
+  <text x="220" y="249" text-anchor="middle" font-size="13" fill="#fff">placa gráfica</text>
+  <!-- SSD -->
+  <rect x="285" y="90" width="65" height="40" rx="4" fill="#ffc107"/>
+  <text x="317" y="115" text-anchor="middle" font-size="13" font-weight="700" fill="#212529">SSD</text>
+  <!-- Passos -->
+  <g font-size="15" fill="#212529">
+    <rect x="400" y="80" width="160" height="44" rx="8" fill="#e7f1ff" stroke="#0d6efd"/>
+    <text x="480" y="107" text-anchor="middle">1. Diagnóstico</text>
+    <rect x="400" y="148" width="160" height="44" rx="8" fill="#e7f1ff" stroke="#0d6efd"/>
+    <text x="480" y="175" text-anchor="middle">2. Upgrade</text>
+    <rect x="400" y="216" width="160" height="44" rx="8" fill="#d1e7dd" stroke="#198754"/>
+    <text x="480" y="243" text-anchor="middle">3. Teste</text>
+  </g>
+  <path d="M480 124 v24 M480 192 v24" stroke="#495057" stroke-width="2"/>
+</svg>

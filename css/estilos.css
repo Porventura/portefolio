@@ -1,0 +1,38 @@
+/* estilos.css — o NOSSO CSS.
+   É ligado DEPOIS do Bootstrap, por isso estas regras sobrepõem-se às dele. */
+
+/* Avatar com as iniciais (em vez de fotografia) */
+.avatar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;          /* 50% transforma o quadrado num círculo */
+  background: #0d6efd;         /* o azul "primary" do Bootstrap */
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  display: flex;               /* flexbox para centrar as letras */
+  align-items: center;         /* centra na vertical */
+  justify-content: center;     /* centra na horizontal */
+}
+
+/* Slides do carrossel feitos com texto (sem imagens) */
+.slide-texto {
+  min-height: 260px;           /* altura mínima para o slide não ficar "achatado" */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem 4rem;          /* espaço lateral para o texto não ficar debaixo das setas */
+}
+
+/* Imagens da galeria: o cursor de "mãozinha" mostra que se pode clicar */
+.galeria img {
+  cursor: pointer;
+}
+
+/* Fundo claro por trás das imagens SVG dos cartões */
+.card-img-top {
+  background: #f8f9fa;
+}

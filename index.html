@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <!-- Viewport: sem esta linha o telemóvel mostra a página "encolhida" -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Início | Rui Fernandes</title>
+  <!-- 1.º o CSS do Bootstrap, 2.º o nosso (para o nosso se sobrepor) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVBAR (igual nas 4 páginas; muda só o link "active") ========== -->
+  <!-- navbar-expand-lg: menu aberto a partir de 992 px; abaixo disso fica no botão ☰.
+       sticky-top: a barra "cola" ao topo quando se faz scroll. -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Rui Fernandes</a>
+      <!-- data-bs-target="#menu" tem de coincidir com o id="menu" mais abaixo -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <!-- ms-auto empurra os links para a direita -->
+        <ul class="navbar-nav ms-auto">
+          <!-- "active" + aria-current marcam a página onde estamos -->
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="sobre.html">Sobre mim</a></li>
+          <li class="nav-item"><a class="nav-link" href="projetos.html">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactos.html">Contactos</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ========== APRESENTAÇÃO (GRID + BOTÕES) ========== -->
+    <header class="bg-light py-5">
+      <div class="container">
+        <!-- Grelha de 12 colunas: col-md-4 + col-md-8 = 12.
+             No telemóvel (abaixo de md) as duas colunas ficam empilhadas. -->
+        <div class="row align-items-center g-4">
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="avatar" aria-hidden="true">RF</div>
+          </div>
+          <div class="col-12 col-md-8 text-center text-md-start">
+            <h1 class="display-5 fw-bold">Rui Fernandes</h1>
+            <p class="lead">Técnico de informática em formação · Lisboa</p>
+            <p>Hardware, sistemas e redes. A caminho da administração de sistemas e da cibersegurança.</p>
+            <!-- Botões: btn-primary (cheio), btn-outline-* (só contorno) -->
+            <a href="projetos.html" class="btn btn-primary me-2 mb-2">Ver projetos</a>
+            <a href="sobre.html" class="btn btn-outline-secondary me-2 mb-2">Sobre mim</a>
+            <a href="contactos.html" class="btn btn-outline-secondary mb-2">Contactar</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========== CAROUSEL ========== -->
+    <section class="py-5">
+      <div class="container">
+        <h2 class="mb-4">Áreas de trabalho</h2>
+        <!-- data-bs-ride="carousel": os slides passam sozinhos -->
+        <div id="carouselAreas" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel">
+
+          <!-- Indicadores (os pontinhos): um botão por slide -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselAreas" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselAreas" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselAreas" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+
+          <div class="carousel-inner">
+            <!-- Só UM slide pode ter "active": é o que aparece primeiro -->
+            <div class="carousel-item active">
+              <div class="slide-texto bg-primary">
+                <h3>Hardware</h3>
+                <p class="mb-0">Montagem, diagnóstico de avarias, upgrades de memória e substituição de discos.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-texto bg-dark">
+                <h3>Sistemas e redes</h3>
+                <p class="mb-0">Windows Server, Active Directory, DNS, DHCP e firewall pfSense em ambiente virtual.</p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="slide-texto bg-secondary">
+                <h3>Web</h3>
+                <p class="mb-0">HTML, CSS e Bootstrap. Este site foi feito à mão.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Setas anterior / seguinte -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselAreas" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselAreas" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Seguinte</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CARDS ========== -->
+    <section class="py-5 bg-light">
+      <div class="container">
+        <h2 class="mb-4">Explorar</h2>
+        <!-- row-cols-1 row-cols-md-3: 1 cartão por linha no telemóvel, 3 a partir do tablet -->
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <!-- h-100: todos os cartões com a mesma altura -->
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Sobre mim</h3>
+                <p class="card-text">Formação, experiência e competências técnicas.</p>
+                <!-- mt-auto empurra o botão para o fundo do cartão -->
+                <a href="sobre.html" class="btn btn-outline-primary mt-auto align-self-start">Ler mais</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Projetos</h3>
+                <p class="card-text">Laboratório de rede virtual, reparação de PCs e sites feitos por mim.</p>
+                <a href="projetos.html" class="btn btn-outline-primary mt-auto align-self-start">Ver projetos</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm">
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Contactos</h3>
+                <p class="card-text">Tem uma proposta ou uma dúvida? Deixe-me uma mensagem.</p>
+                <a href="contactos.html" class="btn btn-outline-primary mt-auto align-self-start">Contactar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-dark text-white-50 text-center py-4">
+    <small>&copy; 2026 Rui Fernandes · Feito à mão com HTML e Bootstrap</small>
+  </footer>
+
+  <!-- JavaScript do Bootstrap no FIM do body: faz funcionar o menu ☰ e o carrossel -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

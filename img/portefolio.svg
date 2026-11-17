@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="600" height="340" fill="#f8f9fa"/>
+  <!-- Janela do browser -->
+  <rect x="60" y="30" width="480" height="285" rx="10" fill="#fff" stroke="#adb5bd" stroke-width="2"/>
+  <rect x="60" y="30" width="480" height="30" rx="10" fill="#dee2e6"/>
+  <circle cx="82" cy="45" r="6" fill="#dc3545"/><circle cx="102" cy="45" r="6" fill="#ffc107"/><circle cx="122" cy="45" r="6" fill="#198754"/>
+  <!-- Navbar -->
+  <rect x="60" y="60" width="480" height="30" fill="#212529"/>
+  <text x="78" y="80" font-size="13" font-weight="700" fill="#fff">Rui Fernandes</text>
+  <text x="520" y="80" text-anchor="end" font-size="12" fill="#adb5bd">Início  Sobre  Projetos  Contactos</text>
+  <!-- Grelha de 3 cartões -->
+  <rect x="80" y="110" width="135" height="110" rx="6" fill="#e7f1ff" stroke="#0d6efd"/>
+  <rect x="232" y="110" width="135" height="110" rx="6" fill="#e7f1ff" stroke="#0d6efd"/>
+  <rect x="384" y="110" width="135" height="110" rx="6" fill="#e7f1ff" stroke="#0d6efd"/>
+  <text x="147" y="170" text-anchor="middle" font-size="13" fill="#0d6efd">col-lg-4</text>
+  <text x="299" y="170" text-anchor="middle" font-size="13" fill="#0d6efd">col-lg-4</text>
+  <text x="451" y="170" text-anchor="middle" font-size="13" fill="#0d6efd">col-lg-4</text>
+  <text x="300" y="260" text-anchor="middle" font-size="17" font-weight="700" fill="#212529">Este portefólio</text>
+  <text x="300" y="285" text-anchor="middle" font-size="13" fill="#6c757d">HTML · Bootstrap 5 · GitHub Pages</text>
+</svg>
