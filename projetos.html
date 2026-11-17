@@ -89,6 +89,22 @@
 
       <div class="col">
         <div class="card h-100 shadow-sm">
+          <img src="img/pirilampo.jpg" class="card-img-top" alt="Ecrã inicial do jogo Pirilampo">
+          <div class="card-body">
+            <h2 class="card-title h5">Pirilampo — Zaragata no Prado</h2>
+            <p class="card-text">Jogo de tiros horizontal em estilo cartoon, feito em HTML5 Canvas: tudo é desenhado por código.</p>
+            <span class="badge text-bg-warning">HTML5 Canvas</span>
+            <span class="badge text-bg-success">JavaScript</span>
+            <span class="badge text-bg-danger">Jogo</span>
+          </div>
+          <div class="card-footer bg-transparent border-0 pb-3">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPirilampo">Ver detalhes</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 shadow-sm">
           <img src="img/portefolio.svg" class="card-img-top" alt="Esquema da página inicial deste portefólio">
           <div class="card-body">
             <h2 class="card-title h5">Este portefólio</h2>
@@ -122,6 +138,10 @@
       <div class="col-6 col-md-3">
         <img src="img/dimmantes.svg" class="img-fluid rounded border" alt="DIMMantes"
              data-bs-toggle="modal" data-bs-target="#modalImagem" data-imagem="img/dimmantes.svg">
+      </div>
+      <div class="col-6 col-md-3">
+        <img src="img/pirilampo-jogo.jpg" class="img-fluid rounded border" alt="Pirilampo em jogo"
+             data-bs-toggle="modal" data-bs-target="#modalImagem" data-imagem="img/pirilampo-jogo.jpg">
       </div>
       <div class="col-6 col-md-3">
         <img src="img/portefolio.svg" class="img-fluid rounded border" alt="Este portefólio"
@@ -192,6 +212,32 @@
         </div>
         <div class="modal-footer">
           <a href="https://porventura.github.io/dimmantes/" class="btn btn-primary" target="_blank" rel="noopener">Ver online</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPirilampo" tabindex="-1" aria-labelledby="tituloPirilampo" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title h5" id="tituloPirilampo">Pirilampo — Zaragata no Prado</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+        </div>
+        <div class="modal-body">
+          <p>Shoot 'em up horizontal num único ficheiro HTML, sem imagens nem bibliotecas externas:
+            o cenário, as personagens e os efeitos são todos desenhados por código no elemento canvas.</p>
+          <ul class="mb-0">
+            <li>Cenário com efeito parallax (camadas a velocidades diferentes).</li>
+            <li>Inimigos, power-ups e um boss final.</li>
+            <li>Som e música gerados no browser.</li>
+            <li>Controlos de teclado e de toque (telemóvel).</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="https://porventura.github.io/pirilampo/" class="btn btn-primary" target="_blank" rel="noopener">Jogar</a>
+          <a href="https://github.com/Porventura/pirilampo" class="btn btn-outline-secondary" target="_blank" rel="noopener">Ver código</a>
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         </div>
       </div>
